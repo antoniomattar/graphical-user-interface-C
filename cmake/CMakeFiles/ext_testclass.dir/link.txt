@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o -o ext_testclass   -L/user/7/marestj/ProjetC/projet-c-fantastique/_x11  -Wl,-rpath,/user/7/marestj/ProjetC/projet-c-fantastique/_x11 -ltestclass libei.a -leibase -lfreeimage -lSDL2 -lSDL2_ttf -lSDL2_gfx -lm 
