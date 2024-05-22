@@ -1,12 +1,12 @@
 /**
- * @file	ei_button.h
+ * @file	ei_implem_button.h
  *
  * @brief 	Private definitions about buttons.
  *
  */
 
-#ifndef EI_BUTTON_H
-#define EI_BUTTON_H
+#ifndef EI_IMPLEM_BUTTON_H
+#define EI_IMPLEM_BUTTON_H
 
 #include "ei_implementation.h"
 
@@ -45,7 +45,7 @@ void button_drawfunc(ei_widget_t widget,
  * \brief   Function that sets the default values of a button.
  */
 
-void button_setdefaultsfunc();
+void button_setdefaultsfunc(ei_widget_t widget);
 
 /**
  * \brief   Function that is called to notify the geometry manager
@@ -59,7 +59,7 @@ void button_geomnotifyfunc();
  */
 
 typedef struct ei_impl_button_t{  //Implementation of a button
-    ei_widget_t widget;
+    ei_impl_widget_t widget;
     ei_size_t size;
     ei_color_t color;
     int border_width;
@@ -74,6 +74,7 @@ typedef struct ei_impl_button_t{  //Implementation of a button
     ei_anchor_t img_anchor;
     ei_callback_t callback;
     ei_user_param_t user_param;
+    bool is_toplevel_close_button;
 } ei_impl_button_t;
 
 
